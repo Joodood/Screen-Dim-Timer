@@ -64,7 +64,11 @@ class PomodoroTimer:
         self.stopped = False
         self.running = False
 
-        self.root.mainloop()
+
+        #make sure when user quits that the brightness is changed back to normal
+
+        # self.root.protocol('WM_DELETE_WINDOW', on_closing)
+        # self.root.mainloop()
 
     def get_brightness(self):
         return self.pct.get_brightness()
@@ -178,5 +182,7 @@ class PomodoroTimer:
         self.stopped = True
         self.skipped = True
 
-
-PomodoroTimer()
+if __name__ == "__main__":
+    app = PomodoroTimer()
+    app.root.mainloop()
+    # self.root.protocol('WM_DELETE_WINDOW', on_closing)
