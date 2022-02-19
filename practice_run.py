@@ -31,6 +31,8 @@ class Hun():
         self.tab2 = ttk.Frame(self.tabs, width=600, height=100)
         self.tab3 = ttk.Frame(self.tabs, width=600, height=100)
 
+        self.tab4 = ttk.Frame(self.tabs, width=600, height=100)
+
         self.pomodoro_timer_label = ttk.Label(self.tab1, text = "25:00", font = ("Ubuntu", 48))
         self.pomodoro_timer_label.pack(pady = 20)
 
@@ -44,6 +46,8 @@ class Hun():
         self.tabs.add(self.tab1, text = "Pomodoro")
         self.tabs.add(self.tab2, text = "Short Break")
         self.tabs.add(self.tab3, text = "Long Break")
+
+        self.tabs.add(self.tab4, text = "Settings")
 
 
         self.grid_layout = ttk.Frame(self.root)
